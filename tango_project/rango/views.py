@@ -8,4 +8,5 @@ def index(request):
     return render(request, 'index.html', context_dict)
 
 def about(request):
-    return HttpResponse("Rango says here is the about page on real.<br><a href='/rango/'>Main page</a>")
+    cont = {'message':"Rango says here is the about page on real."}
+    return render(request,'about.html',cont)
